@@ -37,3 +37,10 @@ export const showItems = (item) => {
 </li>`;
     DOMElements.itemList.insertAdjacentHTML('beforeend', markup);
 };
+
+
+// Cross out done items
+
+
+
+// Remove deleted items from UI

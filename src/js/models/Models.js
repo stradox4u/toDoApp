@@ -21,3 +21,4 @@ export default class todoItem {
 // Add the input to data structure
 
 
+// Remove deleted items from the data structure

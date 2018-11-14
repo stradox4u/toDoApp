@@ -18,17 +18,23 @@ const addActions = () => {
     console.log(allItems);
 };
 
-// Add event listener for add button
+// Event listener for add button/Enter key
 DOMElements.addButton.addEventListener('click', () => {
-    addActions();
-});
-
-document.addEventListener('keypress', (e) => {
-    if (e.keyCode === 13) {
+    if (userInput() !== '') {
         addActions();
     }
 });
 
+document.addEventListener('keypress', (e) => {
+    if (e.keyCode === 13 && userInput() !== '') {
+        addActions();
+    }
+});
 
+// Event listener for done button
+
+
+
+// Event listener for delete button
 
 

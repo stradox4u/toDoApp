@@ -40,7 +40,12 @@ export const showItems = (item) => {
 
 
 // Cross out done items
+//const strikeThrough = `<style>text-decoration: line-through</style>`; (didn't work)
 
+export const crossOut = (event) => {
+    event.target.parentNode.parentNode.children[0].children[0].style="text-decoration:line-through";
+
+    };
 
 
 // Remove deleted items from UI

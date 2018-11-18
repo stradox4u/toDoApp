@@ -16,9 +16,21 @@ export default class todoItem {
         this.item = item;
     }
     
-}
+};
 
 // Add the input to data structure
-
+export let data = () => {
+    let allData = allItems.map(e => e.item);
+    return allData;
+}
 
 // Remove deleted items from the data structure
+export const deleteItem = (event) => {
+    let item = event.target.parentNode.parentNode.children[0].children[0].innerHTML;
+    if (event.target.id === `delete-${data().indexOf(item)}`)
+    {
+        let remData = data().splice((data().indexOf(item)), 1);
+        //console.log(data());
+    }
+    
+}

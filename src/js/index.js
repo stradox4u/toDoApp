@@ -1,7 +1,7 @@
 // Global Controller
-import { DOMElements, userInput, clearField, focusField, showItems, showDate, crossOut } from './views/Views';
+import { DOMElements, userInput, clearField, focusField, showItems, showDate, crossOut, deleteUI } from './views/Views';
 import todoItem from './models/Models';
-import { date } from './models/Models';
+import { date, data, deleteItem } from './models/Models';
 
 export const allItems = [];
 
@@ -15,7 +15,8 @@ const addActions = () => {
     showItems(newItem.item);
     clearField();
     focusField();
-    //console.log(allItems);
+    data();
+    
 };
 
 // Event listener for add button/Enter key
@@ -36,6 +37,9 @@ document.addEventListener('keypress', (e) => {
 DOMElements.itemList.addEventListener('click', crossOut);
 
 
-// Event listener for delete button
 
+// Event listeners for delete button
 
+DOMElements.listItems.addEventListener('click', deleteUI);
+
+DOMElements.itemList.addEventListener('click', deleteItem);
